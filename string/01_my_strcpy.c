@@ -6,7 +6,7 @@
 #endif
 #include <stdio.h>
 
-char* my_strcpy(char* dest, char* src)
+char* my_strcpy(char* dest, const char* src)
 {
 	char* tmp = dest;
 	while (*dest++ = *src++) ;
