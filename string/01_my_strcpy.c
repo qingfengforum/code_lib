@@ -13,6 +13,24 @@ char* my_strcpy(char* dest, const char* src)
 	return tmp;
 }
 
+char* std_strcpy(char* dest, const char* src)
+{
+	if (dest==NULL || src==NULL) {  //有一个为空，就没有必要拷贝
+		return NULL;
+	}
+
+	if (dest == src) { //指向到内存都相同，直接返回
+		return dest;
+	}
+
+	char* tmp = dest;
+	while ((*dest++=*src++) != '\0');
+
+	return tmp;
+
+}
+
+
 int main()
 {
 	char a[10] = "hello";
